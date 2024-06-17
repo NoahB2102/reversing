@@ -39,7 +39,7 @@ Wikipedia definiert es wie folgt:
 
 Das ist echt überwältigend, oder? Nun, das ist einer der Hauptgründe, warum dieser Leitfaden existiert. Er wurde geschrieben, um Reverse Engineering so einfach wie möglich zu machen.  
 
-![How To Reverse Engineer](/img/how-to-re.png)
+![How To Reverse Engineer](./img/how-to-re.png)
 
 Hier findest du eine umfangreiche Liste mit Reverse-Engineering-Tutorials zu x86-, x64-, 32-Bit-ARM- und 64-Bit-ARM-Architekturen. Egal, ob du gerade erst anfängst oder schon ein bisschen Ahnung hast: Mit diesem Guide und den praktischen Übungen darin kannst du die Grundlagen des Reverse Engineering kennenlernen. Das ist eine Fähigkeit, die in der Welt der Cybersicherheit einfach unverzichtbar ist. Wenn du schon Profi bist und nur ein paar deiner Skills auffrischen willst, kannst du das Inhaltsverzeichnis als Leitfaden nehmen, um dir bei Bedarf dein eigenes Tempo dafür zu schaffen, was bisher in jedem Kapitel besprochen wurde.
 
@@ -136,7 +136,7 @@ Aber keine Sorge! Das binäre Zahlensystem ist da! Im Binärsystem hat jede Spal
 Im Dezimalsystem zur Basis 10 haben wir z.B. die Zahl 15, was bedeutet: `(1 x 10) + (5 x 1) = 15`. Die 5 ist also die Zahl mal 1 und die 1 ist die Zahl mal 10.
 
 Das Binärsystem funktioniert auf ähnliche Weise, allerdings beziehn wir uns jetzt auf die Basis 2. Die gleiche Zahl im Binärformat ist 1111. Zur Veranschaulichung:  
-![Binärsystem](/img/binary.png)
+![Binärsystem](./img/binary.png)
 
 Das binäre Zahlensystem ist ein Zahlensystem, das nur zwei Ziffern verwendet, um Zahlen darzustellen. Diese Zahlen sind für Computerarchitekturen notwendig und nicht die Ziffern 1 bis 9 plus 0.
 Binäre Zahlen sind wichtig, weil sie die Entwicklung von Computern und verwandten Technologien vereinfachen. Das Zahlensystem besteht aus zwei Ziffern, mit denen Zahlen dargestellt werden, die für eine Computerarchitektur notwendig sind. Im Gegensatz zum Dezimalsystem werden hier die Ziffern 1 bis 9 plus 0 nicht verwendet.  
@@ -155,7 +155,7 @@ Dieses spannende Zahlensystem wird Hexadezimal genannt. Der Grund, warum wir die
 Hexadezimal ist ähnlich wie jedes andere Zahlensystem, mit dem Unterschied, dass im Hexadezimalsystem jede Spalte das 16-fache des Wertes der Spalte zu ihrer Rechten hat. Das Schöne an der Hexadezimaldarstellung ist, dass es nicht nur 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 gibt, sondern auch A, B, C, D, E und F und damit 16 verschiedene Symbole.
 
 Schauen wir uns eine einfache Tabelle an, um zu sehen, wie das Hexadezimalsystem im Vergleich zum Dezimalsystem aussieht.  
-![Dezimal-Hexadezimaltabelle](/img/hexdec-table.png)
+![Dezimal-Hexadezimaltabelle](./img/hexdec-table.png)
 
 Im Dezimalsystem wird alles in der Potenz von 10 behandelt. Nehmen wir die Zahl 42 und untersuchen wir sie im Dezimalsystem:
 
@@ -220,7 +220,7 @@ Nehmen wir ein weiteres Beispiel für F5 hexadezimal. Das sieht so aus:
 ```
 
 Hier ist eine Tabelle von binär nach hexadezimal:
-![Binär zu Hexadezimal Tabelle](/img/bin-to-hex.png)
+![Binär zu Hexadezimal Tabelle](./img/bin-to-hex.png)
 
 Das ist wichtig, wenn wir unsere C-Programme in Assembler umwandeln.
 
@@ -239,10 +239,10 @@ F --- 15 x 4096 = 61,440
 ```
 
 So funktioniert die Addition in Hexadezimal: Von nun an haben alle Zahlen im Hexadezimalsystem ein "h" neben der Zahl:
-![Addition in Hex1](/img/hexadd1.png)
+![Addition in Hex1](./img/hexadd1.png)
 
 Ein weiteres Beispiel:
-![Addition in Hex2](/img/hexadd2.png)
+![Addition in Hex2](./img/hexadd2.png)
 
 Jetzt schauen wir uns die Subtraktion an:
 ```
@@ -298,12 +298,12 @@ Ein Byte besteht aus 8 Bits. Zwei Bytes werden als word bezeichnet, zwei words w
 Ein Byte besteht aus 8 Bits und ist eine Potenz von 2^8, was 256 ergibt. Die Anzahl der Binärzahlen mit 8 Bits ist einer von 256 Werten, die bei 0 beginnen und bis 255 gehen.
 
 Jedes Byte des Speichers in einem Computer hat seine eigene eindeutige Adresse. Schauen wir uns mal die disassemblierten Anweisungen für eine einfache Hello-World-Anwendung unter Linux an. Wir setzen dazu einen Breakpoint bei der main-Funktion. Wir verwenden dafür den GDB-Debugger:
-![Beispiel Disassembler](/img/disassembled-example.png)
+![Beispiel Disassembler](./img/disassembled-example.png)
 
 Keine Sorge, wenn das noch keinen Sinn ergibt. Ich will dir damit nur einen kleinen Einblick in unser erstes Programm geben, das wir zusätzlich zum Lernen über Speicher in einem Computer untersuchen werden.  
 
 Unten siehst du eine Untersuchung des ESP-Registers. Auch hier ist es nicht entscheidend, dass du weißt, was ein Register ist oder was ESP tut. Wir wollen einfach nur sehen, wie ein Speicherplatz aussieht:
-![Speicherstelle ESP-Register](/img/memory-location.png)
+![Speicherstelle ESP-Register](./img/memory-location.png)
 
 Wir sehen den Speicherplatz `0xffffd040`, der natürlich in Hexadezimal angegeben ist. Wir sehen auch den Wert im ESP-Register, nämlich `0xf7fac3dc`, ebenfalls in hexadezimaler Schreibweise.
 
@@ -321,7 +321,7 @@ Wichtig ist, dass Du dir Zeit nimmst und dich mit den einzelnen Lektionen ausein
 Eine Computeranwendung ist einfach eine Tabelle mit Maschinenanweisungen, die im Speicher abgelegt sind. Die Binärzahlen, aus denen das Programm besteht, sind nur durch die Art und Weise, wie die CPU sie verarbeitet, einzigartig.
 
 Die grundlegende Architektur besteht aus einer CPU, einem Speicher und I/O-Devices zu Deutsch auch E/A-Geräte (Eingabe/Ausgabe), also Geräten, die Daten empfangen und senden. Sie sind alle über einen Systembus verbunden (siehe unten).
-![Systembus Verbindung](/img/system-bus.png)
+![Systembus Verbindung](./img/system-bus.png)
 
 Die CPU besteht aus vier Teilen:  
 
@@ -329,7 +329,7 @@ Die CPU besteht aus vier Teilen:
 2. Ausführungseinheit (Execution Unit) - hier werden die abgerufenen Befehle ausgeführt.  
 3. Register - Das sind Speicherplätze in der CPU, die Daten kurzzeitig speichern.  
 4. Flags - zeigen an, wenn die Ausführung stattfindet.
-![4 CPU Parts](/img/4-cpu-parts.png)
+![4 CPU Parts](./img/4-cpu-parts.png)
 
 Als 32-Bit-x86-Prozessor holt eine 32-Bit-CPU zunächst ein **Double Word** (4 Byte oder 32 Bit lang) von einer bestimmten Adresse im Speicher ab, das aus dem Speicher gelesen und in die CPU geladen wird. Dann checkt die CPU das Binär-Bitmuster im **Double Word** und startet die Ausführung der Prozedur, die ihr durch den abgerufenen Maschinenbefehl aufgetragen wird.
 
@@ -370,12 +370,12 @@ Ach ja, und denk drank: Die Register oben sind 32 Bit oder 4 Byte lang. Die unte
 Außerdem können ESI, EDI, EBP und ESP durch ihr 16-Bit-Äquivalent referenziert werden, das SI, DI, BP, SP ist.
 
 Das kann am Anfang etwas verwirrend sein. Ich versuche es mal in der folgenden Tabelle zu veranschaulichen:
-![](/img/image1.png)
+![](./img/image1.png)
 
 Bei EAX wäre AX das 16-Bit-Segment. Du kannst AX weiter unterteilen in AL für die niedrigeren 8 Bits und AH für die hohen 8 Bits. Das Gleiche gilt auch für EBX, ECX und EDX. EBX hat BX als 16-Bit-Segment. Du kannst BX weiter unterteilen in BL für die niedrigeren 8 Bits und BH für die hohen 8 Bits. ECX hat CX als 16-Bit-Segment und du kannst CX weiter unterteilen in CL für die niedrigen 8 Bits und CH für die hohen 8 Bits. EDX hat DX als 16-Bit-Segment und du kannst DX weiter unterteilen in in DL für die niedrigen 8 Bits und DH für die hohen 8 Bits.
 
 ESI, EDI, EBP und ESP können wie folgt in ihre 16-Bit-Segmente unterteilt werden:
-![](/img/image2.png)
+![](./img/image2.png)
 
 ESI hätte also SI als 16-Bit-Segment, EDI hätte DI als 16-Bit-Segment, EBP hätte BP als 16-Bit-Segment und ESP hätte SP als 16-Bit-Segment.
 
@@ -412,31 +412,31 @@ Segmentregister werden als Teil des Betriebssystems betrachtet und können in de
 Das EIP-Register (Instruction Point Register) ist das wichtigste Register, mit dem du beim Reverse Engineering zu tun haben wirst. Das EIP behält den Überblick über den nächsten auszuführenden Befehlscode. EIP zeigt auf den nächsten auszuführenden Befehl. Wenn due diesen Zeiger änderst, kannst du zu einem anderen Berich des Codes springen und das Programm so steuern.
 
 Jetzt gehen wir einen Schritt weiter und tauchen in den Code ein. Hier ist ein Beispiel für eine einfach "Hello World" Anwendung in C, auf die wir später in unserem Guide noch genauer eingehen werden. Für unseren heutigen Zweck schauen wir uns die Assemblersprache an, insbesondere das EIP-Register. Wir sehen uns an was wir tun können, um die Programmkontrolle komplett zu hacken.
-![eipExample](/img/eipExample.png)
+![eipExample](./img/eipExample.png)
 
 Mach dir keine Sorgen, wenn du nicht verstehst, was es tut oder wie es funktioniert. Was du hier beachten solltest, ist die Tatsache, dass wir eine Funktion namens `unreachableFunction` haben, die niemals von der Hauptfunktion aufgerufen wird. Wie du sehen wirst. können wir dieses Programm hacken, um den Code auszuführen, wenn wir das EIP-Register kontrollieren können!
-![eipExampleTerminal](/img/eipExampleTerminal.png)
+![eipExampleTerminal](./img/eipExampleTerminal.png)
 
 Wir haben den Code einfach kompiliert, damit er mit dem IA32-Befehlssatz funktioniert, und ihn ausgeführt. Wir du siehst, gibt es keinen Aufruf der `unreachableFunction`, da sie unter normalen Bedingungen unerreichbar ist, wie du an dem gezeigten `Hello World` bei der Ausführung sehen kannst.
 
-![debug eip example](/img/debugEipExample.png)
+![debug eip example](./img/debugEipExample.png)
 
 Wir haben das Programm mit dem GDB-Debugger disassembliert. Wir haben einen Breakpoint bei der `main-Function` gesetzt und das program ausgeführt. Das **=>** zeigt, wohin EIP zeigt, wenn wir zur nächsten Anweisung gehen. Wenn wir dem normalen Programmablauf folgen, wird `Hello World` auf der Konsole ausgegeben und das Programm beendet.
-![eipExampleTerminal2](/img/eipExampleTerminal2.png)
+![eipExampleTerminal2](./img/eipExampleTerminal2.png)
 
 Wenn wir das Programm noch mal laufen lassen und checken, wohin EIP zeigt sehen wir:
-![eipExampleTerminal3](/img/eipExampleTerminal3.png)
+![eipExampleTerminal3](./img/eipExampleTerminal3.png)
 
 Wir sehen, dass EIP auf main+25 oder die Adresse 0x8d0cec83.
 
 Schauen wir uns mal die `unreachableFunction` an und notieren uns, wo sie im Speicher beginnt.
-![eipExampleTerminal4](/img/eipExampleTerminal4.png)
+![eipExampleTerminal4](./img/eipExampleTerminal4.png)
 
 Als nächstes setzen wir EIP auf die Adresse 0x5655619d, damit wir den Programmfluss "entführen" und die `unreachableFunction` ausführen können.
-![eipExampleTerminal5](/img/eipExampleTerminal5.png)
+![eipExampleTerminal5](./img/eipExampleTerminal5.png)
 
 Jetzt, wo wir die Kontrolle über EIP haben, können wir uns ansehen, wie wir den Ablauf eines laufenden Programms zu unserem Vorteil manipuliert haben!
-![eipExampleTerminal6](/img/eipExampleTerminal6.png)
+![eipExampleTerminal6](./img/eipExampleTerminal6.png)
 Wir haben das Programm gehackt!
 
 Die Frage, die sich dir stellt, ist: Warum hast du mir das gezeigt, wenn ich keine Ahnung habe, was das alles ist? Es ist wichtig zu verstehen, dass wir bei einem so langen Guide wie diesem manchmal nach vorne schauen sollten, um zu sehen, warum wir so viele Schritte machen, um die Grundlagen zu lernen, bevor wir in die Materie eintauchen. Aber eines ist sicher: Deine Mühe lohnt sich, wenn du bei diesem Guide bleibst. Wir lernen nämlich, wie wir jedes laufende Programm hacken können, um zu tun, was wir wollen, und wie wir ein bösartiges Programm proaktiv zerlegen können, damit wir es nicht nur deaktivieren, sondern auch zu einer möglichen IP-Adresse zurückverfolgen können, von der der Hack ausgeht.
@@ -546,7 +546,7 @@ Wenn ein Programm startet, wird ein bestimmter zusammenhängender Speicherbereic
 Der Stack-Pointer ist ein Register, das die Spitze des Stacks enthält. Der Stack-Pointer enthält die kleinste Adresse, sagen wir zum Beispiel `0x00001000`, so dass jede Adresse kleiner als `0x00001000` als Müll betrachtet wird und jede Adresse größer als `0x00001000` als gültig angesehen wird.
 
 Die obige Adresse ist zufällig und nicht absolut, wo du den Stack-Pointer von Programm zu Programm findest, da sie variieren wird. Schauen wir uns an, wie der Stack aus einer abstrakten Perspektive aussieht.
-![stackImage](/img/stackImage.png)
+![stackImage](./img/stackImage.png)
 
 Das obige Diagramm ist das, was du klar im Kopf behalten solltest, da das tatsächlich im Speicher passiert. Die nächsten Diagramme werden das Gegenteil von dem zeigen, was oben gezeigt ist.
 
@@ -565,26 +565,26 @@ Du kannst ein oder mehrere Register poppen, indem du die Daten vom Stack in die 
 Schauen wir uns an, wie der Stack zur Implementierung von Funktionen verwendet wird. Für jeden Funktionsaufruf gibt es einen Abschnitt des Stacks, der für die Funktion reserviert ist. Dies wird als Stack-Frame bezeichnet.
 
 Schauen wir uns das C-Programm an, das wir in Kapitel 12 erstellt haben, und untersuchen, wie die main-Funktion aussieht:
-![eipExample](/img/eipExample.png)
+![eipExample](./img/eipExample.png)
 
 Wir sehen zwei Funktionen. Die erste ist die `unreachableFunction`, die unter normalen Umständen nie ausgeführt wird, und wir sehen auch die `main-Function`, die immer die erste Funktion ist, die auf den Stack aufgerufen wird.
 
 Wenn wir dieses Programm ausführen, sieht der Stack so aus:
-![stackImage2](/img/stackImage2.png)
+![stackImage2](./img/stackImage2.png)
 
 Wir können das Stack-Frame für `int main(void)` oben sehen. Es wird auch als Aktivierungsdatensatz bezeichnet. Ein Stack-Frame existiert, wann immer eine Funktion gestartet, aber noch nicht abgeschlossen ist. Zum Beispiel gibt es innerhalb des Body von `int main(void)` einen Aufruf zu `int addMe(int a, int b)`, der zwei Parameter a und b annimmt. Es muss Assemblercode in `int main(void)` geben, um die Parameter für `int addMe(int a, int b)` auf den Stack zu pushen. Untersuchen wir etwas Code.
-![addMe1](/img/addMe.png)
+![addMe1](./img/addMe.png)
 
 Wenn wir dieses Programm kompilieren und ausführen, sehen wir den Wert 5 wie folgt ausgegeben:
-![addMeTerminal](/img/addMeTerminal.png)
+![addMeTerminal](./img/addMeTerminal.png)
 
 Ganz einfach, `int main(void)` ruft zuerst `int addMe(int a, int b)` auf und wird so auf den Stack gelegt:
-![stackImage3](/img/stackImage3.png)
+![stackImage3](./img/stackImage3.png)
 
 Du kannst sehen, dass durch das Platzieren der Argumente auf dem Stack das Stack-Frame für `int main(void)` größer geworden ist. Wir haben auch Platz für den Rückgabewert reserviert, der von `int addMe(int a, int b)` berechnet wird, und wenn die Funktion zurückkehrt, wird der Rückgabewert in `int main(void)` wiederhergestellt und die Ausführung in `int main(void)` fortgesetzt, bis sie abgeschlossen ist.
 
 Sobald wir die Anweisungen für `int addMe(int a, int b)` erhalten haben, benötigt die Funktion möglicherweise lokale Variablen, so dass die Funktion etwas Platz auf dem Stack pushen muss, was so aussehen würde:
-![stackImage4](/img/stackImage4.png)
+![stackImage4](./img/stackImage4.png)
 
 `int addMe(int a, int b)` kann auf die übergebenen Argumente von `int main(void)` zugreifen, weil der Code in `int main(void)` die Argumente genau so platziert, wie `int addMe(int a, int b)` es erwartet.
 
@@ -609,7 +609,7 @@ Dir brummt bestimmt der Schädel. Denk daran, dass diese Themen kompliziert sind
 ### Part 16: Heap
 
 Unser nächster Schritt im Abschnitt "Grundlagen des Malware-Reverse-Engineering" konzentriert sich auf den Heap. Denke daran, dass der Stack nach unten wächst und der Heap nach oben wächst. Es ist sehr, sehr wichtig, dass du dieses Konzept verstehst, während wir voranschreiten.
-![heapImage](/img/heapImage.png)
+![heapImage](./img/heapImage.png)
 
 Der Heap ist der Bereich des Speichers deines Computers, der nicht automatisch für dich verwaltet wird und nicht so streng von der CPU verwaltet wird. Es ist ein frei schwebender Speicherbereich und ist größer als die Zuweisung von Speicher für den Stack.
 
@@ -719,18 +719,18 @@ Der Instruction-Pointer wird verwendet, um der CPU zu helfen, den Überblick dar
 Jeder Instruction Code muss ein Opcode enthalten, der die grundlegende Funktion oder Aufgabe definiert, die von der CPU ausgeführt werden soll. Opcodes sind zwischen 1 und 3 Bytes lang und definieren eindeutig die auszuführende Funktion.
 
 Lass uns nun ein einfaches C-Programm namens test.c untersuchen, um anzufangen.
-![test.c](/img/testC.png)
+![test.c](./img/testC.png)
 
 Alles, was wir tun, ist eine main-Funktion vom Typ Integer zu erstellen, die einen void-Parameter hat und 0 zurückgibt. Dieses Programm beendet einfach das Betriebssystem.
 
 Lass uns dieses Programm kompilieren und ausführen:
-![testCTerminal](/img/testCTerminal.png)
+![testCTerminal](./img/testCTerminal.png)
 
 Lass uns das objdump-Tool verwenden, um die main-Funktion darin zu finden:
-![testCTerminal2](/img/testCTerminal2.png)
+![testCTerminal2](./img/testCTerminal2.png)
 
 Hier ist ein Ausschnitt der Ergebnisse, die du durch das Ausführen des obigen Befehl erhalten würdest. Hier sind die Inhalte der main-Funktion. Denk daran, dass das Folgende in Intel-Syntax ist, wie wir bereits besprochen haben.
-![testCTerminal3](/img/testCTerminal3.png)
+![testCTerminal3](./img/testCTerminal3.png)
 
 Ganz links haben wir die entsprechenden Speicheradressen. In der Mitte haben wir die Opcodes und schließlich ganz recht die entsprechende Assemblersprache in Intel-Syntax.
 
@@ -751,31 +751,31 @@ Wenn du verwirrt bist, ist dass vollkommen in Ordnung. Erinnerst du dich an Litt
 ### Part 21: Programme compilen
 
 Schauen wir uns noch einmal das C-Programm der letzten Lektion an und betrachten genauer, wie wir diesen Quellcode in eine ausführbare Datei umwandeln.
-![test.c](/img/testC.png)
+![test.c](./img/testC.png)
 
 Um dieses Programm in C zu kompilieren, tippen wir einfach:
-![compile](/img/compile1.png)
+![compile](./img/compile1.png)
 
 Dieser einzelne Schritt erstellt dann **`test.o`**, die binäre Objektdate, und **`test`**, die binäre ausführbare Datei.
 
 Wenn wir diesen C-Quellcode in Assembly umwandeln möchten, müssen wir den GNU-Compiler auf folgende Weise verwenden. Lass uns mit dem folgenden Befehl im Terminal beginnen:
-![compile2](/img/compile2.png)
+![compile2](./img/compile2.png)
 
 Beginnen wir mit dem **`-S`** Switch. Der **`-S`** Switch erstellt vergleichbaren Assembly-Quellcode in der AT&T-Syntax. Der **`-m32`** Switch erstellt eine 32-Bit-Ausführungsdatei und der **`-O0`** Switch sagt dem Compiler, wie viel Optimierung beim Kompilieren des Binaries verwendet werden soll. Das ist das große O und die Ziffer 0. Die Ziffer 0 in diesem Fall bedeutet keine Optimierung, was bedeutet, dass es der am besten menschenlesbare Befehlssatz ist. Wenn due eine 1,2 oder 3 einsetzt, nimmt die Menge der Optimierung zu, je höher die Werte sind.
 
-![testCAssembly](/img/testCAssembly.png)
+![testCAssembly](./img/testCAssembly.png)
 Dieser Schritt oben erstellt **`test.s`**, was der äquivalente Assembly-Quellcode ist, wie wir oben erwähnt haben.
 
 Dann müssen wir den Assembly-Quellcode in eine binäre Objektdatei kompilieren, die eine **`test.o`** Datei erzeugt.
-![testCAssembly2](/img/testCAssembly2.png)
+![testCAssembly2](./img/testCAssembly2.png)
 
 Schließlich müssen wir einen Linker verwenden, um den tatsächlichen binären ausführbaren Code aus der binären Objektdatei zu erstellen, was eine ausführbare Datei namens **`test`** erzeugt.
-![testCAssembly3](/img/testCAssembly3.png)
+![testCAssembly3](./img/testCAssembly3.png)
 
 Letztes mal, als wir die ausführbare Datei **`test`** in einem Programm namens objdump untersucht haben und den Main-bereich betrachteten, sahen wir Folgendes, nur dass wir diesmal die AT&T-Assembly-Syntax verwenden werden:
-![testCAssembly4](/img/testCAssembly4.png)
+![testCAssembly4](./img/testCAssembly4.png)
 
 Dieser Befehl oben erzeugt die folgende Ausgabe:
-![testCAssembly5](/img/testCAssembly5.png)
+![testCAssembly5](./img/testCAssembly5.png)
 
 Lass uns den Code im Debugger untersuchen. Lass uns GDB starten, den GNU-Debugger, und zuerst den Quellcode auflisten, indem wir **`l`** tippen, dann einen Breakpoint auf **`main`** setzen und das Programm ausführen. Schließlich disassemblieren wir und überprüfen die Ausgabe unten:
