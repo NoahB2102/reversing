@@ -22,7 +22,7 @@
    2.13 [Part 13: Steuerregister](#part-13-steuerregister)  
    2.14 [Part 14: Flags](#part-14-flags)  
    2.15 [Part 15: Stack](#part-15-stack)  
-   2.16 [Part 16: Heap](#part-16-heap)
+   2.16 [Part 16: Heap](#part-16-heap)  
    2.17 [Part 17: Linux installieren](#part-17-linux-installieren)  
    2.18 [Part 18: vim Text Editor](#part-18-vim-text-editor)  
    2.19 [Part 19: Warum Assembly?](#part-19-warum-assembly)  
